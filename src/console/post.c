@@ -142,7 +142,7 @@ static void cmos_post_code(u8 value)
 }
 #endif /* CONFIG_CMOS_POST */
 
-void post_code(uint8_t value)
+asmlinkage void post_code(uint8_t value)
 {
 #if !CONFIG_NO_POST
 #if CONFIG_CONSOLE_POST

@@ -27,7 +27,7 @@
 
 #ifndef __ROMCC__
 
-void post_code(u8 value);
+asmlinkage void post_code(u8 value);
 #if CONFIG_CMOS_POST_EXTRA
 void post_log_extra(u32 value);
 struct device;

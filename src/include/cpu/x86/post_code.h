@@ -8,5 +8,7 @@
 	outb    %al, $CONFIG_POST_IO_PORT
 
 #else
-#define post_code(value)
+#define post_code(value)       \
+	movb    $value, %al;    \
+	call    post_code
 #endif
